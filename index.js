@@ -34,4 +34,19 @@ form.onsubmit = (event) => {
   if (department.length) resObj.Department = department;
 
   console.log(resObj);
+
+  const getUrl = window.location.href;
+  const url = new URL(getUrl);
+
+  for (key in resObj) {
+    if (Array.isArray(resObj)) {
+      url.searchParams.set(key, resObj[key].join(","));
+    } else if (resObj[key]) {
+      url.searchParams.set(key, resObj[key]);
+    }
+  }
+
+  const resUrl = decodeURIComponent(url.href).split(",").join("|");
+  console.log(resUrl);
+  //window.location = resUrl;
 }
