@@ -1,3 +1,4 @@
+//Task1
 const form = document.getElementById("form");
 form.onsubmit = (event) => {
   const resObj = {};
@@ -35,6 +36,8 @@ form.onsubmit = (event) => {
 
   console.log(resObj);
 
+
+  Task2
   const getUrl = window.location.href;
   const url = new URL(getUrl);
 
@@ -50,3 +53,45 @@ form.onsubmit = (event) => {
   console.log(resUrl);
   //window.location = resUrl;
 }
+
+  //Task3
+// const urlParam = window.location.search.replace(/\?/g, "").split("&");
+// const clearUrlParam = urlParam.map(item => item.split("="));
+
+// const setParam = (keyParam, valueParam) => {
+//   if (keyParam === "Skills") {
+//     const skillsInputs = document.getElementsByName("Skills");
+//     const skills = Object.values(skillsInputs);
+//     const arrValueParam = valueParam.split("|");
+//     skills.forEach(item => {
+//       if (arrValueParam.includes(item.value)) {
+//         item.setAttribute("checked", "");
+//       }
+//     })
+//   }
+//   else if (keyParam === "Department") {
+//     const select = document.getElementById("select");
+//     const arrValueParam = valueParam.split("|");
+//     [...select.options].forEach(item => {
+//       if (arrValueParam.includes(item.value)) {
+//         item.setAttribute("selected", "");
+//       }
+//     })
+//   }
+//   else if (keyParam === "Sex") {
+//     const sexInputs = document.getElementsByName("Sex");
+//     Object.values(sexInputs).forEach(item => {
+//       if (valueParam.includes(item.value)) {
+//         item.setAttribute("checked", "");
+//       }
+//     });
+//   }
+//   else {
+//     const getInput = document.getElementById(keyParam);
+//     getInput.setAttribute("value", valueParam)
+//   }
+// }
+// clearUrlParam.forEach(item => {
+//   setParam(item[0], item[1]);
+// })
+
