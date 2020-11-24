@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Brimit</title>
+</head>
+
+<body>
+  <section class="form_container">
+    <form class="form" id="form" action="">
+      <fieldset>
+        <label><b>First name</b></label>
+        <input type="text" name="FName">
+      </fieldset>
+      <fieldset>
+        <label><b>Last name</b></label>
+        <input type="text" name="LName">
+      </fieldset>
+      <fieldset>
+        <label><b>Email</b></label>
+        <input type="email" name="Email">
+      </fieldset>
+      <fieldset>
+        <label><b>Phone Number</b></label>
+        <input type="tel" name="Phone">
+      </fieldset>
+      <fieldset>
+        <label><b>Sex</b></label>
+        <label>Male
+          <input type="radio" name="Sex" value="Male">
+        </label>
+        <label>Female
+          <input type="radio" name="Sex" value="Female">
+        </label>
+      </fieldset>
+      <fieldset>
+        <label><b>Skills</b></label>
+        <label>HTML
+          <input type="checkbox" name="Skills" value="HTML">
+        </label>
+        <label>CSS
+          <input type="checkbox" name="Skills" value="CSS">
+        </label>
+        <label>Javascript
+          <input type="checkbox" name="Skills" value="Javascript">
+        </label>
+        <label>AJAX
+          <input type="checkbox" name="Skills" value="AJAX">
+        </label>
+      </fieldset>
+      <fieldset>
+        <label><b>Department</b></label>
+        <select multiple id="select">
+          <option value="FrontEnd">FrontEnd</option>
+          <option value="Sitecore">Sitecore</option>
+          <option value="SalesForce">SalesForce</option>
+          <option value="Sharepoint">Sharepoint</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <button class="submit" type="submit">submit</button>
+      </fieldset>
+    </form>
+  </section>
+  <script src="index.js "></script>
+</body>
+
+</html>
