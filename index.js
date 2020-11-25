@@ -13,11 +13,7 @@ form.onsubmit = (event) => {
   if (Phone.value) resObj.Phone = Phone.value;
 
   const sexInputs = document.getElementsByName("Sex");
-  const sex = Object.values(sexInputs).find(item => {
-    if (item.checked) {
-      return item
-    }
-  });
+  const sex = Object.values(sexInputs).find(item => item.checked);
   if (sex) resObj.Sex = sex.value;
 
   const skillsInputs = document.getElementsByName("Skills");
@@ -37,7 +33,7 @@ form.onsubmit = (event) => {
   console.log(resObj);
 
 
-  Task2
+  //Task2
   const getUrl = window.location.href;
   const url = new URL(getUrl);
 
@@ -51,47 +47,51 @@ form.onsubmit = (event) => {
 
   const resUrl = decodeURIComponent(url.href).split(",").join("|");
   console.log(resUrl);
+  //To implement task 2 - uncomment the next line
   //window.location = resUrl;
 }
 
-  //Task3
-// const urlParam = window.location.search.replace(/\?/g, "").split("&");
-// const clearUrlParam = urlParam.map(item => item.split("="));
+//To implement task 3 - uncomment the next lines and comment 51 line: window.location = resUrl;
+//Task3
+// const checkUrlParam = (arrUrlParam) => {
+//   const clearUrlParam = arrUrlParam.map(item => item.split("="));
 
-// const setParam = (keyParam, valueParam) => {
-//   if (keyParam === "Skills") {
-//     const skillsInputs = document.getElementsByName("Skills");
-//     const skills = Object.values(skillsInputs);
-//     const arrValueParam = valueParam.split("|");
-//     skills.forEach(item => {
-//       if (arrValueParam.includes(item.value)) {
-//         item.setAttribute("checked", "");
-//       }
-//     })
+//   const setParam = (keyParam, valueParam) => {
+//     if (keyParam === "Skills") {
+//       const skillsInputs = document.getElementsByName("Skills");
+//       const skills = Object.values(skillsInputs);
+//       const arrValueParam = valueParam.split("|");
+//       skills.forEach(item => {
+//         if (arrValueParam.includes(item.value)) {
+//           item.setAttribute("checked", "");
+//         }
+//       })
+//     }
+//     else if (keyParam === "Department") {
+//       const select = document.getElementById("select");
+//       const arrValueParam = valueParam.split("|");
+//       [...select.options].forEach(item => {
+//         if (arrValueParam.includes(item.value)) {
+//           item.setAttribute("selected", "");
+//         }
+//       })
+//     }
+//     else if (keyParam === "Sex") {
+//       const sexInputs = document.getElementsByName("Sex");
+//       Object.values(sexInputs).forEach(item => {
+//         if (valueParam.includes(item.value)) {
+//           item.setAttribute("checked", "");
+//         }
+//       });
+//     }
+//     else {
+//       const getInput = document.getElementById(keyParam);
+//       getInput.setAttribute("value", valueParam)
+//     }
 //   }
-//   else if (keyParam === "Department") {
-//     const select = document.getElementById("select");
-//     const arrValueParam = valueParam.split("|");
-//     [...select.options].forEach(item => {
-//       if (arrValueParam.includes(item.value)) {
-//         item.setAttribute("selected", "");
-//       }
-//     })
-//   }
-//   else if (keyParam === "Sex") {
-//     const sexInputs = document.getElementsByName("Sex");
-//     Object.values(sexInputs).forEach(item => {
-//       if (valueParam.includes(item.value)) {
-//         item.setAttribute("checked", "");
-//       }
-//     });
-//   }
-//   else {
-//     const getInput = document.getElementById(keyParam);
-//     getInput.setAttribute("value", valueParam)
-//   }
+//   clearUrlParam.forEach(item => {
+//     setParam(item[0], item[1]);
+//   })
 // }
-// clearUrlParam.forEach(item => {
-//   setParam(item[0], item[1]);
-// })
-
+// const urlParam = window.location.search.replace(/\?/g, "").split("&");
+// if (urlParam.length > 2 && urlParam[0] !== "") checkUrlParam(urlParam);
